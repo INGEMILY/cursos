@@ -1,79 +1,613 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato;
+    overflow-x:hidden 
+}
+/* Index */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.bg-azul{
+    background-color: #168aad;
 }
 
-.navbar {
-    background-color: transparent;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.container {
+.navbar-nav{
+ 
+    padding: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+}
+.navbar-nav li{
+    margin-right:20px;
 }
 
-.brand {
-    font-size: 24px;
+
+.nav-link{
+    color: rgb(255, 255, 255);
+    
+}
+
+a.nav-link{
+    font-size: 25px;
+    row-gap: 2rem;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  background-color: rgb(223, 224, 217);
+}
+.index{
+    background-color:#000000
+}
+.index p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2 {
+color: rgb(0, 0, 0);
+text-align: center;
+font-size: 2rem;
+padding-top: 50px;
+margin-bottom: 20px;
+display: block;
+margin-block-start: 0.83em; 
+margin-block-end: 0.83em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+}
+
+
+.navbar-brand{
+    font-size: 30px;
     font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 5px 30px;
+    color: #e9e9e9;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 24px;
+.nav-links  {
+ 
+    border: none;
+    background-color: #130f6a;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-left: 30px; /* Espacio entre los botones */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+
+.carousel-inner,
+.carousel-item{
+    width: 100%;
+    height: 900px;
+    position: relative;
+  
+    
+}
+
+.carousel-item img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+   
+}
+/*
+.slider-frame {
+     flex: 1;
+	width: 1280px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+   
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style:none;
+}
+
+.slider-frame img {
+	width: 100%;
+    height: auto;
+    max-width:1000;
+    display: block;
+    margin: auto;
+
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+*/
+/* --------------------------------------------------------------- */
+/* CSS para hacer el carrusel responsive */
+@media (max-width: 767px) {
+    .carousel-inner,
+    .carousel-item {
+        height: auto; /* Cambia la altura a auto para hacerlo responsive */
+    }
+  
+    .carousel-item img {
+        height: auto; /* Cambia la altura a auto para hacerlo responsive */
+        object-fit: cover;
+    }
+  }
+  
+  /* CSS para hacer la sección "About Us" responsive */
+  @media (max-width: 767px) {
+    .aboutUs {
+        flex-direction: column; /* Cambia a una disposición vertical en pantallas pequeñas */
+        padding: 20px;
+    }
+  
+    .image-logo-dos {
+        order: -1; /* Cambia el orden de la imagen, colocándola antes del texto */
+        margin-bottom: 3px; /* Agrega espacio abajo de la imagen */
+    }
+  }
+  
+/* --------------------------------------------------------------- */
+
+.aboutUs {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #000000;
+    color:white;
+    min-height: 80vh;
+}
+.about{
+    color: white;
+}
+
+
+.aboutUsContent {
+    flex:center; /* Hace que ocupe todo el espacio disponible */
+    padding: 0 180px; /* Añade espaciado horizontal alrededor del contenido */
+    flex-direction: flex-end;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+}
+.image-logo-dos {
+ width: 90%;
+ height: 800px;
+}
+
+.image-logo-dos img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 100%; /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+}
+
+
+
+.footer {
+    background-color: rgb(42, 42, 42);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px; /* Ajusta el ancho del contenido si es necesario */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+/* Login*/
+
+.login{
+    background-color: #000000;
+}
+
+.login p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.login h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+}
+#loginbutton{
+    background-color:#226a0f;
+    padding: 10px 20px;
+    color: white;
+    font-size: 30px;
+}
+/* --------------------------------------------------------------- */
+@media (max-width: 1024px) {
+   
+
+    .contenedor {
+        flex-direction: column; /* Cambia la dirección del contenedor a columna en dispositivos móviles */
+        height: 100%; /* Establece la altura del contenedor al 100% */
+        position: relative; /* Establece la posición relativa para que el div de la imagen ocupe toda la pantalla */
+    }
+
+    .imagen {
+        flex: 1; /* Ocupa todo el espacio disponible */
+        order: 2; /* Cambia el orden para que el div de la imagen aparezca después del formulario */
+        position: absolute; /* Establece la posición absoluta */
+        top: 0; /* Coloca la imagen en la parte superior */
+        left: 0; /* Coloca la imagen en la parte izquierda */
+        width: 100%; /* Establece el ancho al 100% */
+        height: 100%; /* Establece la altura al 100% */
+        z-index: -1; /* Coloca la imagen detrás de los demás elementos */
+    }
+
+    .formulario {
+        flex: 1; /* Ocupa todo el espacio disponible */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+        padding: 20px; /* Añade un poco de espacio alrededor del formulario */
+    }
+
+    .formulario form {
+        max-width: 80%; /* Reduce el ancho del formulario para que se vea mejor en dispositivos móviles */
+        color: white; /* Cambia el color del texto a blanco para que sea visible en el fondo oscuro */
+    }
+
+    .formulario form input,
+    .formulario form button {
+        width: 100%; /* Establece el ancho completo para los campos de entrada y botones */
+    }
+}
+/* --------------------------------------------------------------- */
+.contenedor {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.imagen img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-form{
+    color: white;
+   font-size: 25px;
+    
+}
+
+.elemento {
+    margin-bottom: 60px;
+    color:rgb(0, 0, 0);
+  
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me label {
+    margin-left: 5px; /* */
+    padding:30px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    color: white;
     cursor: pointer;
 }
+/* explora */
 
-.navbar-links {
+.explora{
+    background-color:#000000
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.explora h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.main-header {
+    background-color:#168aad;
+    color: rgb(255, 255, 255);
+    padding: 10px 25px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar-links li {
-    list-style: none;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.navbar-links a {
-    color: #fff;
+
+.navExplora{
+    overflow:hidden;
+    margin-top:10px ;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    background-color:#3c9ebb;
+    font-size: 25px;
+    
+}
+
+.navtres{
+    float:left;
+}
+
+li a{
+    display:block;
+    color:white;
+    text-align: center;
+    padding: 15px;
     text-decoration: none;
-    margin-left: 20px;
+}
+li a :hover
+.nav-item button:hover{
+    background-color:#d22929;
+    }
+    
+
+.margen{
+    margin: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .navbar-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 20px;
-        flex-direction: column;
-    }
-
-    .navbar-links li {
-        margin-bottom: 10px;
-    }
-
-    .navbar-links a {
-        margin-left: 0;
-    }
-
-    #menu-toggle:checked + .menu-icon + .navbar-links {
-        display: flex;
-    }
+.explore {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding: 20px;
+    gap: 20px;
 }
+
+.imgexplore {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    background-color: #cfccccf0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imgexplore img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.product-content h2 {
+    font-size: 24px;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.product-content a {
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid white;
+    color: #000;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+.explore-section {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.explore-article {
+    width: calc(33.33% - 20px);
+}
+
+.explore-article img {
+    width: 100%;
+    height: auto;
+   
+}
+
+/* comunidad */
+
+.comunidad{
+    background-color: #000;
+}
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.user-list {
+    width: 200px;
+    background-color: #000;
+    padding: 20px;
+}
+
+.user-list h2 {
+    margin-bottom: 10px;
+}
+
+.user-list-items {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list-item {
+    margin-bottom: 5px;
+    color: white;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    font-size: 30px;
+  
+}
+
+.chat-area {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #0078d4;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.message {
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.message-form {
+    display: flex;
+
+}
+
+#messageInput {
+    flex: 1;
+    padding: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#sendMessageButton {
+    padding: 5px 10px;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/*Interactua*/
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap:20px ;
+}
+
+/* Estilos del aside de retos */
+
+.retos-section {
+    width: 200px;
+}
+
+.retos-aside {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.retos-title {
+    margin-bottom: 10px;
+}
+
+.retos-list {
+    list-style: none;
+    padding: 0;
+}
+
+.retos-item {
+    margin-bottom: 5px;
+}
+
+.product span {
+    background-color: rgb(196, 70, 70);
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: -10px;
+}
+
